@@ -4,7 +4,15 @@ const Contact = () => {
     return (
         <div>
             <Header />
-            <h1>contact me here!!!</h1>
+            <div className="max-w-4xl mx-auto px-4 py-4">
+                <div className="text-center ">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Contact Me
+                    </h1>
+                    <div className="w-24 h-1 bg-black mx-auto mb-8"></div>
+                    
+                </div>
+            </div>
         </div>
     )
 }
