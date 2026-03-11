@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 
 const Header = () => {
+  
+
+
     return (
        <div className="flex items-center justify-between max-w-6xl mx-auto px-8 py-6">
   {/* Logo */}

@@ -3,7 +3,7 @@ import Header from '../components/Header'
 
 const Home = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white sm:px-6 lg:px-8">
             <Header />
             
             <div className="max-w-5xl mx-auto px-4 py-16 md:py-24">
@@ -12,13 +12,14 @@ const Home = () => {
                     {/* Text Content */}
                     <div className="flex-1">
                         <h1 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
-                            Kwilanf
+                            Kent Wilan Fegarido
+                            
                             <span className="block text-2xl text-gray-500 font-normal mt-2">
                                 Frontend Developer
                             </span>
                         </h1>
                         
-                        <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mb-6"></div>
+                        <div className="w-20 h-1 bg-black mb-6"></div>
                         
                         <p className="text-gray-600 text-lg leading-relaxed mb-8">
                             I craft digital experiences that are fast, accessible, and beautiful. 
