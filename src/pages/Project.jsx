@@ -2,7 +2,7 @@ import Header from "../components/Header";
 
 const Project = () => {
     return (
-        <div>
+        <div className="min-h-screen bg-white sm:px-6 lg:px-8">
             <Header />
             <div className="max-w-4xl mx-auto px-4 py-4">
                 <div className="text-center">
@@ -10,9 +10,11 @@ const Project = () => {
                         My Projects
                     </h1>
                     <div className="w-24 h-1 bg-black mx-auto mb-8"></div>
-                   
+
                 </div>
             </div>
+           
+
         </div>
     )
 }

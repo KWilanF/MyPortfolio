@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
   
@@ -13,18 +13,18 @@ const Header = () => {
   
   {/* Navigation */}
   <div className="flex gap-10">
-    <Link to="/" className="text-gray-700 hover:text-black text-sm tracking-wider">
+    <NavLink to="/" style={({isActive}) => {return isActive ? {color: "red"} : {color: "black"}}}>
       HOME
-    </Link>
-    <Link to="/about" className="text-gray-700 hover:text-black text-sm tracking-wider">
+    </NavLink>
+    <NavLink to="/about" style={({isActive}) => {return isActive ? {color: "red"} : {color: "black"}}}>
       ABOUT
-    </Link>
-    <Link to="/projects" className="text-gray-700 hover:text-black text-sm tracking-wider">
+    </NavLink>
+    <NavLink to="/projects" style={({isActive}) => {return isActive ? {color: "red"} : {color: "black"}}}>
       PROJECTS
-    </Link>
-    <Link to="/contact" className="text-gray-700 hover:text-black text-sm tracking-wider">
+    </NavLink>
+    <NavLink to="/contact" style={({isActive}) => {return isActive ? {color: "red"} : {color: "black"}}}>
       CONTACT
-    </Link>
+    </NavLink>
   </div>
    {/* Social Icons with Background */}
     <div className="flex gap-3">

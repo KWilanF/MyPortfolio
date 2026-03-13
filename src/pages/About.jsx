@@ -2,9 +2,9 @@ import Header from "../components/Header";
 
 const About = () => {
     return (
-        <div>
+        <div className="min-h-screen bg-white sm:px-6 lg:px-8">
             <Header />
-            <div className="max-w-4xl mx-auto px-4 py-4">
+            <div className="max-w-4xl mx-auto px-4 py-4 ">
                 <div className="text-center">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         About Me
@@ -16,7 +16,6 @@ const About = () => {
                     </p>
                 </div>
             </div>
-
         </div>
     )
 }
