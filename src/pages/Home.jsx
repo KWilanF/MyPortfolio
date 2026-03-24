@@ -33,6 +33,8 @@ const Home = () => {
                             >
                                 Projects
                             </Link>
+
+                            
                             <a 
                                 href="/resume.pdf" 
                                 className="px-6 py-2 border border-gray-300 rounded-lg hover:border-gray-900 transition-colors"
