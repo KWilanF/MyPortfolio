@@ -1,18 +1,31 @@
 import 'dotenv/config';
 import express from 'express';
 import mongoose from 'mongoose';
-import cors from 'cors';
 import workoutRoutes from './routes/workoutRoutes.js';
 
-// express app
 const app = express();
 
-// CORS middleware 
-app.use(cors({
-    origin: ['https://kwillanf-portfolio.vercel.app', 'http://localhost:3000'], // Allow your frontend domains
-    credentials: true
-}));
-
+// Manual CORS middleware - ADD THIS
+app.use((req, res, next) => {
+    // Allow specific origin
+    res.header('Access-Control-Allow-Origin', 'https://kwilanf-portfolio.vercel.app');
+    
+    // Allow credentials
+    res.header('Access-Control-Allow-Credentials', 'true');
+    
+    // Allow specific methods
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
+    
+    // Allow specific headers
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    
+    // Handle preflight requests
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(200);
+    }
+    
+    next();
+});
 
 // middleware
 app.use(express.json());
@@ -28,9 +41,8 @@ app.use('/api/workouts', workoutRoutes);
 // connect to db
 mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
-        // listen for requests
         app.listen(process.env.PORT, () => {
-            console.log('Server is running....');
+            console.log('Server is running on port', process.env.PORT);
         });
     })
     .catch((error) => {
