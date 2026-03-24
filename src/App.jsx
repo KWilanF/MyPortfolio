@@ -3,7 +3,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
+import Workout from "./pages/Workout";
 import NotfoundPage from "./pages/NotfoundPage";
+
 
 function App(){
   return(
@@ -12,6 +14,7 @@ function App(){
       <Route path="/about" element={<About />} />
       <Route path="/projects" element={<Project />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/workouts" element={<Workout />} />
       <Route path="*" element={<NotfoundPage />} />
     </Routes>
     

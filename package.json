@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:4000",
   "name": "portfolio",
   "private": true,
   "version": "1.0.0",
