@@ -5,10 +5,21 @@ import workoutRoutes from './routes/workoutRoutes.js';
 
 const app = express();
 
-// Manual CORS middleware - ADD THIS
+// Get allowed origins from environment variable or use defaults
+const allowedOrigins = process.env.ALLOWED_ORIGINS 
+    ? process.env.ALLOWED_ORIGINS.split(',')
+    : ['https://kwilanf-portfolio.vercel.app', 'http://localhost:5173'];
+
+// Manual CORS middleware
 app.use((req, res, next) => {
-    // Allow specific origin
-    res.header('Access-Control-Allow-Origin', 'https://kwilanf-portfolio.vercel.app');
+    const origin = req.headers.origin;
+    
+    // Check if the origin is allowed
+    if (allowedOrigins.includes(origin) || process.env.NODE_ENV === 'development') {
+        res.header('Access-Control-Allow-Origin', origin || '*');
+    } else {
+        console.log(`Blocked CORS request from: ${origin}`);
+    }
     
     // Allow credentials
     res.header('Access-Control-Allow-Credentials', 'true');
@@ -43,6 +54,7 @@ mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         app.listen(process.env.PORT, () => {
             console.log('Server is running on port', process.env.PORT);
+            console.log('CORS allowed origins:', allowedOrigins);
         });
     })
     .catch((error) => {
