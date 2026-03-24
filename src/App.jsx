@@ -5,7 +5,7 @@ import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import Workout from "./pages/Workout";
 import NotfoundPage from "./pages/NotfoundPage";
-
+import KeepAlive from './components/KeepAlive';
 
 function App(){
   return(
