@@ -8,17 +8,19 @@ import NotfoundPage from "./pages/NotfoundPage";
 import KeepAlive from './components/KeepAlive';
 
 function App(){
-  return(
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/projects" element={<Project />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/workouts" element={<Workout />} />
-      <Route path="*" element={<NotfoundPage />} />
-    </Routes>
-    
-  )
+  return (
+    <>
+      <KeepAlive /> {/* This needs to be in the component tree */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Project />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/workouts" element={<Workout />} />
+        <Route path="*" element={<NotfoundPage />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
