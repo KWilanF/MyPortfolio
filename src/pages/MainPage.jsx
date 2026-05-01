@@ -1,8 +1,7 @@
-import React from "react"
-import Header from "../components/common/Header"
-import Home from "../components/sections/Home"
+import Header from "../components/common/Header";
+import Home from "../components/sections/Home";
 import About from "../components/sections/About";
-import Projects from '../components/sections/Projects'
+import Projects from "../components/sections/Projects";
 
 function Main() {
     return (
@@ -14,49 +13,35 @@ function Main() {
                         { label: "Home", href: "#home" },
                         { label: "About", href: "#about" },
                         { label: "Projects", href: "#projects" },
-                        { label: "Contact", href: "#contact" }
-                    ]}
-                    socialLinks={[
-                        { name: "Twitter", href: "#" },
-                        { name: "LinkedIn", href: "#" }
+                        { label: "Contact", href: "#contact" },
                     ]}
                 />
             </div>
 
-           
+            <main className="bg-white pt-16">
+                <section id="home" className="scroll-mt-16 min-h-screen">
+                    <Home
+                        subtitle="Junior"
+                        name="Kent Wilan Fegarido"
+                        position="Frontend Developer"
+                    />
+                </section>
 
-                <main className="bg-white mt-15">
+                <section id="about" className="scroll-mt-16 min-h-screen">
+                    <About title="About me" />
+                </section>
 
-                    <section id="home" className="scroll-mt-20 mt-8 mb-16 h-128 bg-white">
-                        <Home
-                            subtitle="Junior"
-                            name="Kent Wilan Fegarido"
-                            position="Frontend Developer"
-                        />
-                    </section>
+                <section id="projects" className="scroll-mt-16 min-h-screen">
+                    <Projects title="Some Things I Build" />
+                </section>
 
-                    <section id="about" className="scroll-mt-20 mb-16 h-128 bg-white">
-                        <About 
-                        title="About me"
-                        />
-                    </section>
-
-                    <section id="projects" className="scroll-mt-20  mb-16 mt-8 h-128 bg-white">
-                        <Projects
-                        title="Some Thing's I Build"
-                        />
-                    </section>
-
-                    <section id="contact" className="scroll-mt-20  mb-16 mt-8 h-128 bg-white">
-                        <h3>Contact</h3>
-                        <p>This section contains my contact information.</p>
-                    </section>
-
-                </main>
-           
-
+                <section id="contact" className="scroll-mt-16 min-h-screen p-8 border-t border-gray-100">
+                    <h3 className="text-3xl font-bold mb-4">Contact</h3>
+                    <p>This section contains my contact information.</p>
+                </section>
+            </main>
         </div>
-    )
+    );
 }
 
 export default Main;
