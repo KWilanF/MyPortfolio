@@ -13,8 +13,15 @@ function About({ title }) {
                     I am driven by continuous learning and improving through real projects and challenges. I enjoy solving problems, enhancing user experience, and refining system design as I grow from a junior to a more advanced developer. My goal is to become a well-rounded full stack developer capable of building scalable, efficient, and user-friendly applications from start to finish.
                 </p>
 
-                <button className="border border-black text-red-500 rounded-full p-2 font-bold my-4">Resume</button>
-
+                <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border border-black text-red-500 rounded-full p-2 font-bold my-4 inline-block"
+                >
+                    Resume
+                </a>
+                
             </div>
 
             <div className="w-[40%] mx-8 flex flex-col items-center justify-center">
