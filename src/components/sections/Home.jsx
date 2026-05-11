@@ -1,6 +1,15 @@
 import Button from "../common/Button";
 
 function Home({ name, position, subtitle }) {
+
+    const scrollToProjects = () => {
+        const section = document.getElementById("projects");
+
+        section?.scrollIntoView({
+            behavior: "smooth",
+        });
+    };
+
     return (
         <div className="min-h-full p-6 md:p-8 flex flex-col md:flex-row bg-white items-center border-t border-gray-100 gap-8">
             {/* Text content */}
@@ -15,7 +24,7 @@ function Home({ name, position, subtitle }) {
                     my skills by building projects and exploring new tools in web development.
                 </p>
                 <div className="flex justify-center md:justify-start">
-                    <Button button="View my works" github="Github" />
+                    <Button  onClick={scrollToProjects} button="View my works" github="Github" />
                 </div>
             </div>
 

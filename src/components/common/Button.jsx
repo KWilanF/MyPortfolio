@@ -1,9 +1,9 @@
 import { FaGithub } from "react-icons/fa";
 
-function Button({ button, github }) {
+function Button({ button, github, onClick }) {
     return (
         <div className="flex gap-3 items-center">
-            <button className="bg-black text-white text-sm p-2 px-4 rounded-full">
+            <button    onClick={onClick} className="bg-black text-white text-sm p-2 px-4 rounded-full  hover:scale-110 transition">
                 {button}
             </button>
 
@@ -11,7 +11,7 @@ function Button({ button, github }) {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-white/10 border border-black text-black text-sm p-2 px-4 rounded-full"
+                className="flex items-center gap-2 bg-white/10 border border-black text-black text-sm p-2 px-4 rounded-full  hover:scale-110 transition"
             >
                 <FaGithub className="text-gray-600 w-4 h-4" />
                 {github}

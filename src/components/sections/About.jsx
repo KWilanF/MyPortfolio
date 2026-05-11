@@ -53,5 +53,5 @@ function About({ title }) {
         </div>
     );
 }
-
+    
 export default About;

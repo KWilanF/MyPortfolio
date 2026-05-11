@@ -2,6 +2,7 @@ import Header from "../components/common/Header";
 import Home from "../components/sections/Home";
 import About from "../components/sections/About";
 import Projects from "../components/sections/Projects";
+import Contact from "../components/sections/Contact";
 
 function Main() {
     return (
@@ -36,8 +37,7 @@ function Main() {
                 </section>
 
                 <section id="contact" className="scroll-mt-16 min-h-screen p-8 border-t border-gray-100">
-                    <h3 className="text-3xl font-bold mb-4">Contact</h3>
-                    <p>This section contains my contact information.</p>
+                   <Contact />
                 </section>
             </main>
         </div>
